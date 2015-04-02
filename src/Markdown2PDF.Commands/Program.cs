@@ -1,14 +1,16 @@
-﻿using Markdown2PDF.Converts;
+﻿using Markdown2PDF.Core;
+using Markdown2PDF.Core.Converts;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Markdown2PDF
+namespace Markdown2PDF.Commands
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             var options = new Options();
@@ -22,12 +24,12 @@ namespace Markdown2PDF
                 Awesome.Convert(options.InputFile);
             }
             else
-            {   
+            {
                 Console.WriteLine("Press any key to exit.");
                 Console.Read();
             }
 
-            
+
         }
     }
 }

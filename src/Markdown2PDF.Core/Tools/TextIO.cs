@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Markdown2PDF.Tools
+namespace Markdown2PDF.Core.Tools
 {
     public class TextIO
     {

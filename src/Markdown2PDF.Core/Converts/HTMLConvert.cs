@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
-using Markdown2PDF.Tools;
+using Markdown2PDF.Core.Tools;
 
-namespace Markdown2PDF.Converts
+namespace Markdown2PDF.Core.Converts
 {
     public class HTMLConvert
     {

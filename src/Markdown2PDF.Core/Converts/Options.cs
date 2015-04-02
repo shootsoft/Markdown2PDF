@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Markdown2PDF.Converts
+namespace Markdown2PDF.Core.Converts
 {
     public class Options
     {

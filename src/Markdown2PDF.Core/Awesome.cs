@@ -1,4 +1,4 @@
-﻿using Markdown2PDF.Converts;
+﻿using Markdown2PDF.Core.Converts;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Markdown2PDF
+namespace Markdown2PDF.Core
 {
     public class Awesome
     {
