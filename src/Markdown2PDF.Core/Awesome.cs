@@ -18,7 +18,7 @@ namespace Markdown2PDF.Core
             }
             Console.WriteLine("Converting " + markdown);
 
-            string tempFile = GetTempFile(".html");
+            string tempFile = markdown + "_" + Guid.NewGuid().ToString().Trim('{', '}') + "_.html";
             HTMLConvert.ConvertFile(markdown, tempFile, title, theme);
             if (pdf == null)
             {
@@ -26,6 +26,19 @@ namespace Markdown2PDF.Core
             }
 
             PDFConvert.Convert(tempFile, pdf);
+
+            try
+            {
+                if (File.Exists(tempFile))
+                {
+                    File.Delete(tempFile);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private static string GetTempFile(string ext)

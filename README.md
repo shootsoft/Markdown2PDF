@@ -14,6 +14,12 @@ Markdown2PDF -i <MarkdownFile> [-o PDFfile] [-t Title]
 - [strapdownjs](http://strapdownjs.com/)
 - [wkhtmltopdf](http://wkhtmltopdf.org/)
 
+# Screenshot
+
+- Example PDF
+![Example PDF](docs/screenshot.png)
+
+
 # TODO
 
 - Automatically check & download wkhtmltopdf 

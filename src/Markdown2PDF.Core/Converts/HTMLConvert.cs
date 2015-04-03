@@ -18,8 +18,6 @@ namespace Markdown2PDF.Core.Converts
                 return false;
             }
 
-            
-
             string content = TextIO.ReadText(markdownFile);
             string template = TextIO.ReadText(templateFile);
 
