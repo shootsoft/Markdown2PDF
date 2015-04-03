@@ -1,7 +1,7 @@
 # Markdown2PDF
 Convert markdown file to PDF with images, chapters, highlight codes
 
-![LOGO](docs/logo.png)
+![LOGO](docs/markdown2pdf.png)
 
 # Useage
 
