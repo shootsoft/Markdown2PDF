@@ -35,6 +35,12 @@
     <Reference Include="CommandLine">
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net40\CommandLine.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\ICSharpCode.SharpZipLib.Patched.0.86.4\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress">
+      <HintPath>..\packages\p3-sharpcompress.0.10.5.2\lib\net40\SharpCompress.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,10 +55,13 @@
     <Compile Include="Converts\Options.cs" />
     <Compile Include="Converts\PDFConvert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\WKHtmltoPDFDownloader.cs" />
     <Compile Include="Tools\TextIO.cs" />
+    <Compile Include="Tools\ZipUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\config.json" />
+    <None Include="Data\wkhtmltopdf\readme.md" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -60,9 +69,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\wkhtmltopdf\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

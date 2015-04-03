@@ -25,7 +25,7 @@ namespace Markdown2PDF.Core.Converts
             var usage = new StringBuilder();
             usage.AppendLine("Markdown2PDF 1.0");
             usage.AppendLine("Read user manual for usage instructions...");
-            usage.AppendLine("Markdown2PDF.exe -i <MarkdownFile> [-o PDFfile] [-t Title]");
+            usage.AppendLine("Markdown2PDF -i <MarkdownFile> [-o PDFfile] [-t Title]");
             return usage.ToString();
         }
     }

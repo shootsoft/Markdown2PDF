@@ -1,6 +1,14 @@
 # Markdown2PDF
 Convert markdown file to PDF with images, chapters, highlight codes
 
+![LOGO](docs/logo.png)
+
+# Useage
+
+```shell
+Markdown2PDF -i <MarkdownFile> [-o PDFfile] [-t Title]
+```
+
 # Dependencies
 
 - [strapdownjs](http://strapdownjs.com/)
