@@ -26,10 +26,10 @@ namespace Markdown2PDF.Core.Tools
         {
             FileInfo file = e.UserState as FileInfo;
             if (file != null)
-            { 
-            
+            {
+
             }
-            
+
 
             IsDownloading = false;
         }
@@ -43,7 +43,7 @@ namespace Markdown2PDF.Core.Tools
         {
             string url = "http://wkhtmltopdf.org/downloads.html";
             string regex = @"version is \<strong\>(?<version>(\d+|\.)+)\<\/strong\>";
-            
+
             string webpage = client.DownloadString(url);
             Regex reg = new Regex(regex);
             Match m = reg.Match(webpage);
@@ -79,7 +79,7 @@ namespace Markdown2PDF.Core.Tools
                     IsDownloading = true;
                 }
             }
-            
+
         }
 
         public string GetUrl()
@@ -87,7 +87,7 @@ namespace Markdown2PDF.Core.Tools
             string url = string.Empty;
 
             switch (Environment.OSVersion.Platform)
-            { 
+            {
                 case PlatformID.Win32NT:
                     if (Environment.OSVersion.Version.Major == 5)
                     {
@@ -98,7 +98,7 @@ namespace Markdown2PDF.Core.Tools
                         else
                         {
                             url = "http://downloads.sourceforge.net/project/wkhtmltopdf/{version}/wkhtmltox-{version}_mingw-w64-cross-win32.exe";
-                        
+
                         }
                     }
                     else if (Environment.OSVersion.Version.Major >= 6)
@@ -106,11 +106,11 @@ namespace Markdown2PDF.Core.Tools
                         // Vista on up
                         if (Environment.Is64BitOperatingSystem)
                         {
-                            url = "http://downloads.sourceforge.net/project/wkhtmltopdf/{version}/wkhtmltox-{version}_msvc2013-win64.exe"; 
+                            url = "http://downloads.sourceforge.net/project/wkhtmltopdf/{version}/wkhtmltox-{version}_msvc2013-win64.exe";
                         }
                         else
                         {
-                            url = "http://downloads.sourceforge.net/project/wkhtmltopdf/{version}/wkhtmltox-{version}_msvc2013-win32.exe"; 
+                            url = "http://downloads.sourceforge.net/project/wkhtmltopdf/{version}/wkhtmltox-{version}_msvc2013-win32.exe";
                         }
                     }
                     break;
@@ -130,8 +130,8 @@ namespace Markdown2PDF.Core.Tools
 
             return url;
 
-          
-        
+
+
         }
     }
 }

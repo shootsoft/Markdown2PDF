@@ -49,6 +49,16 @@ namespace Markdown2PDF.Mac
 		{
 			base.AwakeFromNib ();
 
+			this.ButtonClose.Activated+= ButtonClose_Clicked;
+
+		}
+
+		private void ButtonClose_Clicked (object sender, EventArgs e)
+		{
+			this.Window.Close ();
+			this.Window.Display ();
+			NSApplication.SharedApplication.Terminate (this);
+
 		}
 	}
 }
